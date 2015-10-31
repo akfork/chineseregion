@@ -4,6 +4,8 @@ __author__ = 'xuanwo'
 import os, sys
 import json
 
+with open('region.json') as fp:
+        data = json.load(fp)
 
 def find(str, data):
     city = []
@@ -12,10 +14,7 @@ def find(str, data):
             city.append(data[i])
     return city
 
-
 def main(argv):
-    with open('region.json') as fp:
-        data = json.load(fp)
     for i in range(0, len(argv)):
         answer = find(argv[i], data)
         if(len(answer)==0):
