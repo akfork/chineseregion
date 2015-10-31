@@ -3,10 +3,7 @@ __author__ = 'xuanwo'
 
 import os, sys
 import json
-import requests
-
-r = requests.get('https://raw.githubusercontent.com/Xuanwo/chineseregionlib/master/region.json')
-data = r.json()
+import pkgutil
 
 def find(str, data):
     city = []
@@ -16,6 +13,7 @@ def find(str, data):
     return city
 
 def main(argv):
+    data = json.loads(pkgutil.get_data(__package__, 'region.json'))
     for i in range(0, len(argv)):
         answer = find(argv[i], data)
         if(len(answer)==0):
