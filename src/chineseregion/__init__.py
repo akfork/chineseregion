@@ -3,7 +3,7 @@ __author__ = 'xuanwo'
 
 import os, sys
 import json
-import pkgutil
+
 
 def find(str, data):
     city = []
@@ -12,11 +12,14 @@ def find(str, data):
             city.append(data[i])
     return city
 
+
 def main(argv):
-    data = json.loads(pkgutil.get_data(__package__, 'region.json'))
+    d = os.path.dirname(sys.modules['chineseregion'].__file__)
+    with open(os.path.join(d, 'region.json'), 'rb', encoding='utf-8') as fp:
+        data = json.load(fp)
     for i in range(0, len(argv)):
         answer = find(argv[i], data)
-        if(len(answer)==0):
+        if (len(answer) == 0):
             print("Not Found")
         else:
             print(answer)
