@@ -9,8 +9,8 @@ setup(
     description="a chinese region lib for python",
     author="xuanwo",
     author_email="xuanwo.cn@gmail.com",
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    package_data={'src': ['*.json']},
+    packages=find_packages('src/chineseregion'),
+    package_dir={'': 'src/chineseregion'},
+    package_data={'chineseregion': ['*.json']},
     include_package_data=True
 )
