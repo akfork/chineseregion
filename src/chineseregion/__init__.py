@@ -3,7 +3,9 @@ __author__ = 'xuanwo'
 
 import os, sys
 import json
+import urllib
 
+urllib.urlretrieve('https://raw.githubusercontent.com/Xuanwo/chineseregionlib/master/region.json', 'region.json')
 with open('region.json') as fp:
         data = json.load(fp)
 
