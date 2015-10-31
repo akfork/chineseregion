@@ -3,6 +3,7 @@ __author__ = 'xuanwo'
 
 import os, sys
 import json
+import pkgutil
 
 
 def find(str, data):
@@ -14,9 +15,7 @@ def find(str, data):
 
 
 def main(argv):
-    d = os.path.dirname(sys.modules['chineseregion'].__file__)
-    with open(os.path.join(d, 'region.json'), 'rb', encoding='utf-8') as fp:
-        data = json.load(fp)
+    data = json.loads(str(pkgutil.get_data(__package__, 'region.json'),encoding='utf-8'))
     for i in range(0, len(argv)):
         answer = find(argv[i], data)
         if (len(answer) == 0):
