@@ -1,2 +1,2 @@
-# ÖÐ¹úµØÇø¿â
+# ä¸­å›½åœ°åŒºåº“
 a chinese region lib for python
