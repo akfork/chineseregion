@@ -3,11 +3,10 @@ __author__ = 'xuanwo'
 
 import os, sys
 import json
-import urllib
+import requests
 
-urllib.urlretrieve('https://raw.githubusercontent.com/Xuanwo/chineseregionlib/master/region.json', 'region.json')
-with open('region.json') as fp:
-        data = json.load(fp)
+r = requests.get('https://raw.githubusercontent.com/Xuanwo/chineseregionlib/master/region.json')
+data = r.json()
 
 def find(str, data):
     city = []
