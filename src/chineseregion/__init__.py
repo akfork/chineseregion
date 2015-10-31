@@ -4,7 +4,7 @@ __author__ = 'xuanwo'
 import os, sys
 import json
 
-with open('region.json') as fp:
+with open('./region.json') as fp:
         data = json.load(fp)
 
 def find(str, data):
