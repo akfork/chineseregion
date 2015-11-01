@@ -10,8 +10,8 @@ entry_points = {
     ]
 }
 
-with open("requirements.txt") as f:
-    requires = [l for l in f.read().splitlines() if l]
+# with open("requirements.txt") as f:
+#     requires = [l for l in f.read().splitlines() if l]
 
 setup(
     name="chineseregion",
