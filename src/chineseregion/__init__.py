@@ -14,7 +14,7 @@ def find(str, data):
 
 
 def main(argv):
-    data = json.loads(str(pkgutil.get_data(__package__, 'data.json'),encoding='utf-8'))
+    data = json.loads(str(pkgutil.get_data(__package__, 'data.json')).encode(encoding='utf-8'))
     for i in range(0, len(argv)):
         answer = find(argv[i], data)
         if (len(answer) == 0):
