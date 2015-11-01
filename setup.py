@@ -23,7 +23,7 @@ setup(
     license="MIT License",
     packages=find_packages(),
     entry_points=entry_points,
-    install_requires=requires,
+    # install_requires=requires,
     include_package_data=True,
     classifiers=[
         'Development Status :: 3 - Alpha ',

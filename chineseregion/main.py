@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 __author__ = 'xuanwo'
 
+'''
+chineseregion cli
+
+Usage:
+    chineseregion "your position"
+'''
+
 import os, sys
 import json
 import pkgutil
