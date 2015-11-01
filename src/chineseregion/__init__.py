@@ -2,11 +2,11 @@
 __author__ = 'xuanwo'
 
 import os, sys
-import json
-import pkgutil
+import regiondata
 
+data = regiondata._data
 
-def find(str, data):
+def find(str):
     city = []
     for i in sorted(data.keys()):
         if str.find(data[i]) != -1:
@@ -15,9 +15,8 @@ def find(str, data):
 
 
 def main(argv):
-    data = json.loads(str(pkgutil.get_data(__package__, 'region.json'),encoding='utf-8'))
     for i in range(0, len(argv)):
-        answer = find(argv[i], data)
+        answer = find(argv[i])
         if (len(answer) == 0):
             print("Not Found")
         else:

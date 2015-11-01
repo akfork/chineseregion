@@ -11,6 +11,5 @@ setup(
     author_email="xuanwo.cn@gmail.com",
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    package_data={'': ['*.json']},
     include_package_data=True
 )
