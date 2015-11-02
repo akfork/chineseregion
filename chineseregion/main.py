@@ -14,6 +14,7 @@ import pkgutil
 import chineseregion
 
 data = json.loads(str(pkgutil.get_data(chineseregion.__package__, 'data.json'),'utf-8'))
+print(data)
 
 def find(str):
     city = []

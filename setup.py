@@ -25,6 +25,7 @@ setup(
     entry_points=entry_points,
     # install_requires=requires,
     include_package_data=True,
+    package_data={'':['*.json']},
     classifiers=[
         'Development Status :: 3 - Alpha ',
         'Environment :: Console',
